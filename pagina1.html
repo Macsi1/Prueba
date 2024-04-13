@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba</title>
+  <style>
+    .Caja1, .Caja2, .Caja3, .Caja4, .Caja5, .Buttom, .Caja6 {
+      background-color: rgb(255, 255, 255); 
+      border: solid 1px rgb(1, 162, 202);
+      display: flex;
+      padding-right: 10px;
+      padding-bottom: 2cap;
+      padding-top: 2cap;
+      margin: 0 auto; 
+      max-width: 400px;
+    }
+    .Imagen{
+      display: block;
+      margin: 0 auto; 
+    }
+    .Img{
+      height: 20px;
+      width: 20px;
+    }
+    
+    .Caja1, .Caja2, .Caja3, .Caja4, .Caja5, .Caja6, .Buttom {
+      padding-left: 15px;
+    }
+
+    .Caja3 {
+      padding-bottom: 2cap;
+    }
+    .Caja4 {
+      padding-bottom: 1.5cap;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <div class="Cajafake"></div>
+
+    <img class="Imagen" src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" alt="foto usuario" height="100px" width="100px">
+    <br>
+    <div class="Caja1" data-mdb-input-init class="form-outline mb-4">
+      <input type="email" id="form3Example3" class="form-control form-control-lg"
+        placeholder="Correo Electronico" />
+      <label class="form-label" for="form3Example3"></label>
+    </div>
+
+    <div class="Caja2" data-mdb-input-init class="form-outline mb-3">
+      <input type="password" id="form3Example4" class="form-control form-control-lg"
+        placeholder="Contraseña" />
+      <label class="form-label" for="form3Example4"></label>
+    </div>
+
+    <div class="Caja3">
+      <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+      <label class="form-check-label" for="form2Example31"> Recuérdame </label>
+    </div>
+
+    <div class="Buttom"><button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Iniciar Sesión</button></div>
+
+    <div class="Caja4">
+      <a href="#!">¿Olvidaste la contraseña?</a>
+    </div>
+
+    <div class="Caja5">
+      <p>¿No eres miembro? <a href="#!">Regístrate</a></p>
+    </div>
+    <div class="Caja6"> <p>o inicia sesión con:ㅤ</p>
+      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+        <img class="Img" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github">
+      </button>
+      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+        <img class="Img" src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt="Facebook">
+      </button>
+      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+        <img class="Img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/twitter-icon.png" alt="Twitter">
+      </button>
+      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+        <img class="Img" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/google-2749270-2284660.png?f=webp" alt="Google">
+      </button> </div>
+
+  </form>
+</body>
+</html>
