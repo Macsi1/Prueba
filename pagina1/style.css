@@ -1,0 +1,32 @@
+.Caja1, .Caja2, .Caja3, .Caja4, .Caja5, .Buttom, .Caja6 {
+    background-color: rgb(255, 255, 255); 
+    border: solid 1px rgb(1, 162, 202);
+    display: flex;
+    padding-right: 10px;
+    padding-bottom: 2cap;
+    padding-top: 2cap;
+    margin: 0 auto; 
+    max-width: 400px;
+  }
+  
+  .Imagen{
+    display: block;
+    margin: 0 auto; 
+  }
+  
+  .Img{
+    height: 20px;
+    width: 20px;
+  }
+  
+  .Caja1, .Caja2, .Caja3, .Caja4, .Caja5, .Caja6, .Buttom {
+    padding-left: 15px;
+  }
+  
+  .Caja3 {
+    padding-bottom: 2cap;
+  }
+  
+  .Caja4 {
+    padding-bottom: 1.5cap;
+  }
