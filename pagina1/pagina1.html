@@ -1,63 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prueba</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-  <form>
+  <form id="loginForm" action="pagina2.html">
     <div class="Cajafake"></div>
 
-    <img class="Imagen" src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" alt="foto usuario" height="100px" width="100px">
+    <img class="Imagen" src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" alt="foto usuario" height="100" width="100">
     <br>
-    <div class="Caja1" data-mdb-input-init class="form-outline mb-4">
-      <input type="email" id="form3Example3" class="form-control form-control-lg"
-        placeholder="Correo Electronico" />
-      <label class="form-label" for="form3Example3"></label>
+    <div class="Caja1 form-outline mb-4" data-mdb-input-init>
+      <label class="form-label" for="form3Example3">Correo Electrónico</label>
+      <input type="email" id="form3Example3" class="form-control form-control-lg" placeholder="Correo Electrónico" required>
     </div>
 
-    <div class="Caja2" data-mdb-input-init class="form-outline mb-3">
-      <input type="password" id="form3Example4" class="form-control form-control-lg"
-        placeholder="Contraseña" />
-      <label class="form-label" for="form3Example4"></label>
+    <div class="Caja2 form-outline mb-3" data-mdb-input-init>
+      <label class="form-label" for="form3Example4">Contraseña</label>
+      <input type="password" id="form3Example4" class="form-control form-control-lg" placeholder="Contraseña" required>
     </div>
 
     <div class="Caja3">
-      <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+      <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked>
       <label class="form-check-label" for="form2Example31"> Recuérdame </label>
     </div>
 
     <div class="Buttom">
-      <a href="pagina2.html" class="btn btn-primary btn-block mb-4">Iniciar Sesión</a>
+      <button type="submit" id="loginButton" class="btn btn-primary btn-block mb-4 disabled" disabled>Iniciar Sesión</button>
     </div>
-  
-  
 
     <div class="Caja4">
       <a href="pagina4.html">¿Olvidaste la contraseña?</a>
-  </div>
-  
+    </div>
 
     <div class="Caja5">
       <p>¿No eres miembro? <a href="pagina5.html">Regístrate</a></p>
-  </div>
-  
-    <div class="Caja6"> <p>o inicia sesión con:ㅤ</p>
-      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-        <img class="Img" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github">
+    </div>
+
+    <div class="Caja6">
+      <p>o inicia sesión con:ㅤ</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <img class="Img" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
       </button>
-      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+      <button type="button" class="btn btn-link btn-floating mx-1">
         <img class="Img" src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt="Facebook">
       </button>
-      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+      <button type="button" class="btn btn-link btn-floating mx-1">
         <img class="Img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/twitter-icon.png" alt="Twitter">
       </button>
-      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+      <button type="button" class="btn btn-link btn-floating mx-1">
         <img class="Img" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/google-2749270-2284660.png?f=webp" alt="Google">
-      </button> </div>
-
+      </button>
+    </div>
   </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const emailInput = document.getElementById('form3Example3');
+      const passwordInput = document.getElementById('form3Example4');
+      const loginButton = document.getElementById('loginButton');
+      const form = document.getElementById('loginForm');
+
+      const validateForm = () => {
+        const emailValue = emailInput.value;
+        const passwordValue = passwordInput.value;
+        if (emailValue && passwordValue && !/\s/.test(passwordValue) && passwordValue.length >= 7) {
+          loginButton.classList.remove('disabled');
+          loginButton.disabled = false;
+        } else {
+          loginButton.classList.add('disabled');
+          loginButton.disabled = true;
+        }
+      };
+
+      emailInput.addEventListener('input', validateForm);
+      passwordInput.addEventListener('input', validateForm);
+    });
+  </script>
 </body>
 </html>
